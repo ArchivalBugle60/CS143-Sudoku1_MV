@@ -20,6 +20,16 @@ public class SudokuBoard {
    }
    
    public String toString() {
-      return "";
+      String finalString = "";
+      for (int i= 0; i < 9; i++) {
+         for (int j = 0; j < 9; j++) {
+            finalString = finalString + contents[i][j];
+      }
+      finalString = finalString + "\n";
+      }
+      
+      
+      return finalString;
    }
+
 }
