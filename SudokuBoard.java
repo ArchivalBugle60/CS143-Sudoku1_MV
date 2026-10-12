@@ -2,9 +2,10 @@ import java.util.*;
 import java.io.*;
 
 public class SudokuBoard {
-   char[][] contents = new char[9][9];
+   protected char[][] contents;
    
    public SudokuBoard(String parameter) throws FileNotFoundException {
+      contents = new char[9][9];
       File fileName = new File(parameter);
       Scanner scanFile = new Scanner(fileName);
       
@@ -21,8 +22,8 @@ public class SudokuBoard {
    
    public String toString() {
       String finalString = "";
-      for (int i= 0; i < 9; i++) {
-         for (int j = 0; j < 9; j++) {
+      for (int i= 0; i < contents.length; i++) {
+         for (int j = 0; j < contents[i].length; j++) {
             finalString = finalString + contents[i][j];
       }
       finalString = finalString + "\n";
