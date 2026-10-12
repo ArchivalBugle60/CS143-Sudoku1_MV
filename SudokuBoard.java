@@ -9,11 +9,11 @@ public class SudokuBoard {
       File fileName = new File(parameter);
       Scanner scanFile = new Scanner(fileName);
       
-      for (int i = 0; i < 9; i++) {
+      for (int i = 0; i < contents.length; i++) {
          String next = "";
          next = scanFile.nextLine();
          
-         for (int j = 0; j < 9; j++) { 
+         for (int j = 0; j < contents[0].length; j++) { 
             contents[i][j] = next.charAt(j);
          }
       }
